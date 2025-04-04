@@ -20,6 +20,8 @@ export const env = createEnv({
     SENTRY_ENVIRONMENT: z
       .enum(["local", "development", "test", "production"])
       .default("development"),
+    OPENAI_API_KEY: z.string(),
+    REPLICATE_API_TOKEN: z.string(),
   },
 
   /**
@@ -55,6 +57,8 @@ export const env = createEnv({
     NEXT_PUBLIC_SENTRY_ENVIRONMENT: process.env.NEXT_PUBLIC_SENTRY_ENVIRONMENT,
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
     NEXT_PUBLIC_SPACES_REGION: process.env.NEXT_PUBLIC_SPACES_REGION,
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    REPLICATE_API_TOKEN: process.env.REPLICATE_API_TOKEN,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
